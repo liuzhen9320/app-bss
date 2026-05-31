@@ -34,6 +34,13 @@ jobs:
             latest
             php84
 
+      - name: Download source
+        run: |
+          sudo apt-get install wget || true
+          wget -O srccc.zip https://github.com/liuzhen9320/blessing-skin-server/releases/download/dev/blessing-skin-server-16f46b5.zip
+          unzip -o srccc.zip -d ./src
+          ls -all ./src
+
       - name: Build & Push Docker image
         uses: docker/build-push-action@f9f3042f7e2789586610d6e8b85c8f03e5195baf # v7
         with:
