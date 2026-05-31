@@ -18,6 +18,7 @@ RUN apk add --no-cache \
   php84-fileinfo \
   php84-fpm \
   php84-gd \
+  php84-imagick \
   php84-intl \
   php84-mbstring \
   php84-pdo \
